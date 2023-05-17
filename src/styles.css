@@ -1,0 +1,19 @@
+body{
+  background-color: #C1D0B5;
+}
+.btn{
+  margin: 10px;
+  border-radius: 25px;
+  width: 100px;
+}
+.form{
+  width: 80%;
+  text-align: center;
+  margin: 15% 2% 0 10%;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: grey;
+  padding: 20% 2%;
+  background-color: #99A98F;
+  min-height: 90%;
+}
