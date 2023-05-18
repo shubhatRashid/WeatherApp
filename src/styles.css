@@ -6,7 +6,7 @@ body{
   border-radius: 25px;
   width: 100px;
 }
-.form{
+.form ,.imageCol,.detailCol{
   width: 80%;
   text-align: center;
   margin: 15% 2% 0 10%;
@@ -16,4 +16,7 @@ body{
   padding: 20% 2%;
   background-color: #99A98F;
   min-height: 90%;
+}
+.skyImage{
+  width: 50%;
 }

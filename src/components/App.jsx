@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import "../styles.css";
 import Header from "./header.jsx"
 import Footer from "./Footer.jsx"
@@ -27,8 +27,7 @@ function App() {
     };
     xhr.send();
   }
-  
-  
+  var url = data ?data.current.condition.icon:"..."
   return (
     <div>
       <Header />
@@ -40,13 +39,14 @@ function App() {
             </Col>
 
             <Col>
-                <div class = "form">
-                  <Image src="C:\Users\Junaid Rashid\PycharmProjects\react-weather-app\public\images\Patchy.png" fluid />
+                <div class = "imageCol">
+                  <Image class = "skyImage" src={url} fluid />
+                  <p>Current Conditions: {data ?JSON.stringify(data.current.condition.text):"loading..."} </p>
                 </div>
             </Col>
 
             <Col>
-            <ul class = "form">
+            <ul class = "detailCol">
               <p>City : {data ?JSON.stringify(data.location.name):"loading..."} </p>
               <p>Region : {data ?JSON.stringify(data.location.region):"loading..."} </p>
               <p>Country: {data ?JSON.stringify(data.location.country) :"loading..."} </p>
@@ -55,6 +55,7 @@ function App() {
               <p>Feels Like: {data ?JSON.stringify(data.current.feelslike_c):"loading..."} </p>
               <p>Humidity(%): {data ?JSON.stringify(data.current.humidity):"loading..."} </p>
               <p>precepitation(in): {data ?JSON.stringify(data.current.precip_in):"loading..."} </p>
+
             </ul>
             </Col>
 
