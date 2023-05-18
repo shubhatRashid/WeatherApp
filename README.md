@@ -1,3 +1,17 @@
+# React weather App
+A react Weather App that return current weather of a city
+live version : https://shubhat33.github.io/WeatherApp/
+### Features
+* Enter the name of a city and get all its current weather details.
+### Technologies used:
+* HTML
+* CSS
+* JavaScript
+* React
+* Bootstrap React
+* git and github for version control and deployment
+* material ui
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
