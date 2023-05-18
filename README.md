@@ -1,6 +1,6 @@
 # React weather App
-A react Weather App that return current weather of a city
-live version : https://shubhat33.github.io/WeatherApp/
+* A react Weather App that return current weather of a city
+* live version : https://shubhat33.github.io/WeatherApp/
 ### Features
 * Enter the name of a city and get all its current weather details.
 ### Technologies used:
