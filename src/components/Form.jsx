@@ -2,21 +2,22 @@ import React from "react"
 import Form from 'react-bootstrap/Form';
 import Button from "./Button.jsx"
 import "../styles.css";
-function InputSizesExample() {
-  var temp = ""
+function InputSizesExample(props) {
   var [city,setCity] = React.useState("")
   function handleChange(event){
-    temp = event.target.value
+    city = event.target.value
+    setCity(event.target.value)
   }
+
   function handleClick(){
-    setCity(temp)
+    props.getCity(city)
+    setCity("")
   }
   return (
     <div class="form">
       <h3 style = {{color:"white"}}> Enter City Name</h3>
-      <Form.Control size="lg" type="text" placeholder="E.g Srinagar" onChange={handleChange}/>
+      <Form.Control id = "myForm" size="lg" type="text" placeholder="E.g Srinagar" onChange={handleChange} value = {city}/>
       <Button name = "Check" onClick = {handleClick}/>
-      <p>{city}</p>
     </div>
   );
 }

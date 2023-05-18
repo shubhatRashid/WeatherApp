@@ -10,13 +10,25 @@ import Image from 'react-bootstrap/Image';
 
 function App() {
   const [data, setData] = useState(null);
-  useEffect(() => {
-    fetch('http://api.weatherapi.com/v1/current.json?key=ef32b14b621b485abbc80735231705&q=Srinagar')
-      .then(response => response.json())
-      .then(json => setData(json))
-      .catch(error => console.error(error));
-  }, []);
-  const imageUrl = data ?JSON.stringify(data.current.condition.icon):"loading..."
+  var [cityName,setCityName] = React.useState("Srinagar")
+
+  function getCity(city){
+    setCityName(city)
+    apiData(city)
+  }
+
+  function apiData(city) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://api.weatherapi.com/v1/current.json?key=ef32b14b621b485abbc80735231705&q='+city);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        setData(JSON.parse(xhr.responseText));
+      }
+    };
+    xhr.send();
+  }
+  
+  
   return (
     <div>
       <Header />
@@ -24,23 +36,25 @@ function App() {
           <Row>
 
             <Col>
-              <ForM />
+              <ForM getCity = {getCity}/>
             </Col>
 
             <Col>
                 <div class = "form">
-                  <Image src={imageUrl} fluid />
+                  <Image src="C:\Users\Junaid Rashid\PycharmProjects\react-weather-app\public\images\Patchy.png" fluid />
                 </div>
             </Col>
 
             <Col>
             <ul class = "form">
-              <p>City : {data ?JSON.stringify(data.location.name) +JSON.stringify(data.location.region):"loading..."} </p>
+              <p>City : {data ?JSON.stringify(data.location.name):"loading..."} </p>
               <p>Region : {data ?JSON.stringify(data.location.region):"loading..."} </p>
-              <p>Country: {data ?JSON.stringify(data.location.country) +JSON.stringify(data.location.region):"loading..."} </p>
-              <p>Temperature (celcius) : {data ?JSON.stringify(data.current.temp_c):"loading..."} </p>
-              <p>Temperature (ferenheit): {data ?JSON.stringify(data.current.temp_f):"loading..."} </p>
+              <p>Country: {data ?JSON.stringify(data.location.country) :"loading..."} </p>
               <p>Current Conditions: {data ?JSON.stringify(data.current.condition.text):"loading..."} </p>
+              <p>Temperature  : {data ?JSON.stringify(data.current.temp_c):"loading..."} </p>
+              <p>Feels Like: {data ?JSON.stringify(data.current.feelslike_c):"loading..."} </p>
+              <p>Humidity(%): {data ?JSON.stringify(data.current.humidity):"loading..."} </p>
+              <p>precepitation(in): {data ?JSON.stringify(data.current.precip_in):"loading..."} </p>
             </ul>
             </Col>
 
