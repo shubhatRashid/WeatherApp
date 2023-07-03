@@ -1,22 +1,53 @@
-body{
-  background-color: #C1D0B5;
+body {
+  background-color: #07161b;
 }
-.btn{
+.btn {
   margin: 10px;
   border-radius: 25px;
   width: 100px;
 }
-.form ,.imageCol,.detailCol{
-  width: 80%;
+.form,
+.imageCol,
+.detailCol,
+.detail {
+  align-items: center;
   text-align: center;
-  margin: 15% 2% 0 10%;
+  margin: 10px;
+  padding: 30px 10px;
   border-style: solid;
   border-radius: 25px;
-  border-color: grey;
-  padding: 20% 2%;
-  background-color: #99A98F;
-  min-height: 90%;
+  border-color: #cec7bf;
+  background-color: #3d737f;
 }
-.skyImage{
-  width: 80%;
+.form {
+  background-color: #07161b;
+}
+.imageCol {
+  background-color: #cec7bf;
+}
+.detail {
+  background-color: white;
+}
+.skyImage {
+  width: 100%x;
+}
+@media screen and (min-width: 600px) {
+  .detailCol {
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 100%;
+  }
+  .form,
+  .imageCol,
+  .detailCol,
+  .detail {
+    padding: 40px;
+    margin: 20px;
+  }
+  .footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
