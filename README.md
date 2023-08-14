@@ -1,8 +1,10 @@
 # Current Weather App
 
-![Weather App Screenshot](screenshot.png)
+![image](https://github.com/shubhatRashid/WeatherApp/assets/106548827/d9c6d1c4-06ab-4d1a-9327-ff9f186dc4d8)
 
-A simple Current Weather web application built using HTML, CSS, JavaScript, React, Bootstrap React, Material-UI, Git, and GitHub for version control and deployment.
+* live @ : https://shubhatsweatherapp.netlify.app/
+
+* A simple Current Weather web application built using HTML, CSS, JavaScript, React, Bootstrap React, Material-UI, Git, and GitHub for version control and deployment.
 
 ## Features
 
