@@ -19,7 +19,7 @@ function App() {
 
   function apiData(city) {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://api.weatherapi.com/v1/current.json?key=ef32b14b621b485abbc80735231705&q='+city);
+    xhr.open('GET', `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}`+city);
     xhr.onload = function() {
       if (xhr.status === 200) {
         setData(JSON.parse(xhr.responseText));
