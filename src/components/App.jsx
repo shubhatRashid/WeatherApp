@@ -11,6 +11,7 @@ import Image from 'react-bootstrap/Image';
 function App() {
   const [data, setData] = useState(null);
   var [cityName,setCityName] = React.useState("Srinagar")
+  const [clicked,setClick] = useState(false)
 
   function getCity(city){
     setCityName(city)
@@ -23,6 +24,9 @@ function App() {
     xhr.onload = function() {
       if (xhr.status === 200) {
         setData(JSON.parse(xhr.responseText));
+        setClick(true)
+      }else{
+        console.log(xhr.status)
       }
     };
     xhr.send();
@@ -30,23 +34,23 @@ function App() {
   var url = data ?data.current.condition.icon:"..."
   return (
     <div>
-      <Header />
-      <Container fluid >
-          <Row>
+      <Header/>
+      <Container fluid  className='detailCol'>
+          <Row className='row'>
 
             <Col>
               <ForM getCity = {getCity}/>
             </Col>
 
-            <Col>
+            <Col style={{display:clicked?"block":"none"}}>
                 <div class = "imageCol">
                   <Image class = "skyImage" src={url} fluid />
                   <p>Current Conditions: {data ?JSON.stringify(data.current.condition.text):"loading..."} </p>
                 </div>
             </Col>
 
-            <Col>
-            <ul class = "detailCol">
+            <Col style={{display:clicked?"block":"none"}}>
+            <ul class = "detail">
               <p>City : {data ?JSON.stringify(data.location.name):"loading..."} </p>
               <p>Region : {data ?JSON.stringify(data.location.region):"loading..."} </p>
               <p>Country: {data ?JSON.stringify(data.location.country) :"loading..."} </p>

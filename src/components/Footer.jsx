@@ -3,13 +3,11 @@ import Navbar from "react-bootstrap/Navbar";
 import "../styles.css";
 function Footer() {
   return (
-    <Navbar bg="dark" variant="dark" className="bottom footer">
+    <Navbar className="footer" variant="dark">
       <Container>
-        <Navbar.Brand href="#home"></Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-start">
-          <Navbar.Text>Developer: Shubhat Rashid</Navbar.Text>
-        </Navbar.Collapse>
+        <Navbar.Brand href="#home">
+          Developer : Shubhat Rashid
+        </Navbar.Brand>
       </Container>
     </Navbar>
   );

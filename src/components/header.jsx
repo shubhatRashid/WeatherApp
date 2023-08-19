@@ -1,12 +1,13 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import "../styles.css"
 function Header() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar className="header" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
           <i class="fa-solid fa-sun-cloud"></i>
-          The Weather App
+          <strong>The Weather App</strong>
         </Navbar.Brand>
       </Container>
     </Navbar>

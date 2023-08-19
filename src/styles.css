@@ -1,37 +1,43 @@
 body {
-  background-color: #07161b;
+  background-image: url("https://wallpapers.com/images/high/blue-thunderstorm-weather-78yz410ba26zif8c.webp");
+  padding: 0 50px;
 }
 .btn {
   margin: 10px;
   border-radius: 25px;
   width: 100px;
 }
+.header,
+.footer,
+.detailCol{
+  color: white;
+  border-radius: 25px;
+  background-image: url("https://wallpapers.com/images/high/orange-sky-in-perfect-weather-6vq4ixi29juk0ayh.webp");
+  background-size: cover;
+ 
+}
+
 .form,
 .imageCol,
 .detailCol,
 .detail {
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 10px;
   padding: 30px 10px;
+  margin: 20% 0;
   border-style: solid;
   border-radius: 25px;
   border-color: #cec7bf;
   background-color: #3d737f;
 }
-.form {
-  background-color: #07161b;
-}
-.imageCol {
-  background-color: #cec7bf;
-}
+.form,
+.imageCol,
 .detail {
-  background-color: white;
-}
-.skyImage {
-  width: 100%x;
+  background-color: black;
+  opacity: 85%;
 }
 @media screen and (min-width: 600px) {
   .detailCol {
@@ -43,13 +49,7 @@ body {
   .imageCol,
   .detailCol,
   .detail {
-    padding: 40px;
-    margin: 20px;
-  }
-  .footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    padding: 90px;
+    margin: 30px 0;
   }
 }

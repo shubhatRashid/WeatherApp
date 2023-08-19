@@ -15,8 +15,7 @@ function InputSizesExample(props) {
   }
   return (
     <div class="form">
-      <h3 style = {{color:"white"}}> Enter City Name</h3>
-      <Form.Control id = "myForm" size="lg" type="text" placeholder="E.g Srinagar" onChange={handleChange} value = {city}/>
+      <Form.Control id = "myForm" size="lg" type="text" placeholder="Search City..." onChange={handleChange} value = {city}/>
       <Button name = "Check" onClick = {handleClick}/>
     </div>
   );
