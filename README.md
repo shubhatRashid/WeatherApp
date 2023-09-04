@@ -1,6 +1,7 @@
 # Current Weather App
 
-![image](https://github.com/shubhatRashid/WeatherApp/assets/106548827/d9c6d1c4-06ab-4d1a-9327-ff9f186dc4d8)
+![image](https://github.com/shubhatRashid/WeatherApp/assets/106548827/7af59c2e-5fab-4f92-b46d-6e175715de34)
+
 
 * live @ : https://shubhatsweatherapp.netlify.app/
 
